@@ -13,11 +13,10 @@ public class DXFLib : MonoBehaviour
     
     [DllImport("ASimplePlugin")]
     private static extern IntPtr GetStatus();
-
-
+    
     void Start ()
     {
-        OpenFile(Application.dataPath);
+        OpenFile(@"C:\Users\Len\Desktop\DXF\Assets\Resources\L.dxf");
         Debug.Log(Marshal.PtrToStringAnsi(Path()));
         Debug.Log(Marshal.PtrToStringAnsi(GetStatus()));
     }
